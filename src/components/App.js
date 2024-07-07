@@ -45,5 +45,6 @@ export class App extends Component {
   onItemDelete(amount) {
     this.state.total -= Number(amount);
     this.$total.textContent = `${this.state.total}`;
+    this.state.donates = this.state.donates.filter((donate) => donate != item);
   }
 }
